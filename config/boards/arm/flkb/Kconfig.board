@@ -1,0 +1,11 @@
+#
+# Copyright (c) 2023 Deemen17
+# SPDX-License-Identifier: MIT
+#
+config BOARD_FLKB_LEFT
+	bool "FLKB_left"
+	depends on SOC_NRF52840_QIAA
+
+config BOARD_FLKB_RIGHT
+	bool "FLKB_right"
+	depends on SOC_NRF52840_QIAA

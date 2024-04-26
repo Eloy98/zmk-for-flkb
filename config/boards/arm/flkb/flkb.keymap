@@ -1,0 +1,36 @@
+/*
+*
+* Copyright (c) 2023 Deemen17
+* SPDX-License-Identifier: MIT
+*
+*/
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    behaviors {
+        EscTilde: EscTilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ESCTILDE";
+            bindings = <&kp ESC>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+       default_layer {
+            bindings = <
+            &kp ESC &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6         &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL &kp BACKSPACE &kp HOME
+            &kp F1  &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T                 &kp Y  &kp U  &kp I  &kp O  &kp P     &kp LBRC  &kp RBRC      &kp PIPE &kp DELETE
+            &trans  &trans &trans &trans &trans &trans &trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans
+            &trans  &trans &trans &trans &trans &trans &trans                   &trans &trans &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans &trans 
+            >;
+        };
+    };
+};
